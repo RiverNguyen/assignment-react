@@ -50,6 +50,10 @@ function App() {
         try {
             await updateProduct(product);
             toast.success("Cập nhật sản phẩm thành công !");
+            const newProducts = products.map((item) => {
+                return item.id === product.id ? product : item;
+            });
+            setProducts(newProducts);
         } catch (error) {
             toast.error(error);
         }

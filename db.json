@@ -1,23 +1,39 @@
 {
-  "products": [
-    {
-      "id": "1",
-      "name": "Product A",
-      "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
-      "price": 200
-    },
-    {
-      "id": "2",
-      "name": "Product B",
-      "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
-      "price": 300
-    },
-    {
-      "id": "d680",
-      "name": "Product C",
-      "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
-      "price": "500",
-      "description": "Đẹp"
-    }
-  ]
+    "products": [
+        {
+            "id": "1",
+            "name": "Product A",
+            "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
+            "price": 200,
+            "description": ""
+        },
+        {
+            "id": "2",
+            "name": "Product B ",
+            "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
+            "price": 300,
+            "description": "444"
+        },
+        {
+            "id": "d680",
+            "name": "Product C",
+            "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
+            "price": "500",
+            "description": "Đẹp"
+        }
+    ],
+    "menus": [
+        {
+            "id": 1,
+            "label": "Thống kê",
+            "path": "/admin",
+            "icon": "<svg className=\"bi\"><use xlinkHref=\"#house-fill\" /></svg>"
+        },
+        {
+            "id": 2,
+            "label": "Sản phẩm",
+            "path": "/admin/products",
+            "icon": "<svg className=\"bi\"><use xlinkHref=\"#house-fill\" /></svg>"
+        }
+    ]
 }

@@ -10,7 +10,7 @@ export const getProducts = async () => {
 };
 export const getProductById = async (id) => {
     try {
-        const { data } = await instance.get(`/product/${id}`);
+        const { data } = await instance.get(`/products/${id}`);
         return data;
     } catch (error) {
         console.log(error);

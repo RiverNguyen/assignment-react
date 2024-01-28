@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { getProductById } from "../../api/product";
 
-const ProductEditPage = ({ onAdd }) => {
-    const { register, handleSubmit } = useForm();
+const ProductEditPage = ({ onUpdate }) => {
+    const { id } = useParams();
+    const { register, handleSubmit, reset } = useForm();
     const navigate = useNavigate();
+
+    useEffect(() => {
+        (async () => {
+            const data = await getProductById(id);
+            reset(data);
+        })();
+    }, [id]);
+
     const onSubmit = (data) => {
-        onAdd(data);
+        onUpdate(data);
         navigate("/admin/products");
     };
 
@@ -62,7 +72,7 @@ const ProductEditPage = ({ onAdd }) => {
                     ></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary">
-                    Thêm
+                    Cập nhật
                 </button>
             </form>
         </>

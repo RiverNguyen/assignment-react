@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -6,12 +7,12 @@ const Header = () => {
             className="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow"
             data-bs-theme="dark"
         >
-            <a
+            <Link
                 className="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white"
-                href="#"
+                to={"/admin"}
             >
-                Company name
-            </a>
+                JangCook
+            </Link>
             <ul className="navbar-nav flex-row d-md-none">
                 <li className="nav-item text-nowrap">
                     <button

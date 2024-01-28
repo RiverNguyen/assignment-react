@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { menuList } from "../api/menu";
 
 const SideBar = () => {
+    const [menus, setMenus] = useState([]);
+    useEffect(() => {
+        (async () => {
+            const data = await menuList();
+            setMenus(data);
+        })();
+    }, []);
     return (
-        <div className="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
+        <div
+            style={{ height: "100vh" }}
+            className="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary"
+        >
             <div
                 className="offcanvas-md offcanvas-end bg-body-tertiary"
                 tabIndex={-1}
@@ -23,156 +35,17 @@ const SideBar = () => {
                 </div>
                 <div className="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
                     <ul className="nav flex-column">
-                        <li className="nav-item">
-                            <a
-                                className="nav-link d-flex align-items-center gap-2 active"
-                                aria-current="page"
-                                href="#"
-                            >
-                                <svg className="bi">
-                                    <use xlinkHref="#house-fill" />
-                                </svg>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link d-flex align-items-center gap-2"
-                                href="#"
-                            >
-                                <svg className="bi">
-                                    <use xlinkHref="#file-earmark" />
-                                </svg>
-                                Orders
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link d-flex align-items-center gap-2"
-                                href="#"
-                            >
-                                <svg className="bi">
-                                    <use xlinkHref="#cart" />
-                                </svg>
-                                Products
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link d-flex align-items-center gap-2"
-                                href="#"
-                            >
-                                <svg className="bi">
-                                    <use xlinkHref="#people" />
-                                </svg>
-                                Customers
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link d-flex align-items-center gap-2"
-                                href="#"
-                            >
-                                <svg className="bi">
-                                    <use xlinkHref="#graph-up" />
-                                </svg>
-                                Reports
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link d-flex align-items-center gap-2"
-                                href="#"
-                            >
-                                <svg className="bi">
-                                    <use xlinkHref="#puzzle" />
-                                </svg>
-                                Integrations
-                            </a>
-                        </li>
-                    </ul>
-                    <h6 className="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
-                        <span>Saved reports</span>
-                        <a
-                            className="link-secondary"
-                            href="#"
-                            aria-label="Add a new report"
-                        >
-                            <svg className="bi">
-                                <use xlinkHref="#plus-circle" />
-                            </svg>
-                        </a>
-                    </h6>
-                    <ul className="nav flex-column mb-auto">
-                        <li className="nav-item">
-                            <a
-                                className="nav-link d-flex align-items-center gap-2"
-                                href="#"
-                            >
-                                <svg className="bi">
-                                    <use xlinkHref="#file-earmark-text" />
-                                </svg>
-                                Current month
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link d-flex align-items-center gap-2"
-                                href="#"
-                            >
-                                <svg className="bi">
-                                    <use xlinkHref="#file-earmark-text" />
-                                </svg>
-                                Last quarter
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link d-flex align-items-center gap-2"
-                                href="#"
-                            >
-                                <svg className="bi">
-                                    <use xlinkHref="#file-earmark-text" />
-                                </svg>
-                                Social engagement
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link d-flex align-items-center gap-2"
-                                href="#"
-                            >
-                                <svg className="bi">
-                                    <use xlinkHref="#file-earmark-text" />
-                                </svg>
-                                Year-end sale
-                            </a>
-                        </li>
-                    </ul>
-                    <hr className="my-3" />
-                    <ul className="nav flex-column mb-auto">
-                        <li className="nav-item">
-                            <a
-                                className="nav-link d-flex align-items-center gap-2"
-                                href="#"
-                            >
-                                <svg className="bi">
-                                    <use xlinkHref="#gear-wide-connected" />
-                                </svg>
-                                Settings
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link d-flex align-items-center gap-2"
-                                href="#"
-                            >
-                                <svg className="bi">
-                                    <use xlinkHref="#door-closed" />
-                                </svg>
-                                Sign out
-                            </a>
-                        </li>
+                        {menus.map((menu, index) => (
+                            <li key={index} className="nav-item">
+                                <NavLink
+                                    className="nav-link d-flex align-items-center gap-2 active"
+                                    aria-current="page"
+                                    to={menu.path}
+                                >
+                                    {menu.label}
+                                </NavLink>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
