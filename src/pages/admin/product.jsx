@@ -19,7 +19,7 @@ const ProductPage = ({ products, onRemove }) => {
             </div>
 
             <div className="table-responsive small">
-                <table className="table table-striped table-sm">
+                <table className="table table-striped text-center align-middle table-sm">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
@@ -38,7 +38,7 @@ const ProductPage = ({ products, onRemove }) => {
                                     <img
                                         src={product.image[0]}
                                         alt={product.name}
-                                        width={120}
+                                        width={200}
                                     />
                                 </td>
                                 <td>

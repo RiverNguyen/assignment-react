@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Banner from "./Banner";
 import HeaderMenu from "./HeaderMenu";
+import BannerImg from "./BannerImg";
+import Banner from "./Banner";
 
 const HeaderWebsite = () => {
     return (
@@ -10,7 +11,7 @@ const HeaderWebsite = () => {
             <header className="d-flex flex-wrap align-items-end justify-content-evenly py-3 border-bottom">
                 <div className="col-md-1 mb-2 mb-md-0">
                     <Link
-                        href="/"
+                        to={"/"}
                         className="d-inline-flex link-body-emphasis text-decoration-none"
                     >
                         <img
@@ -21,7 +22,7 @@ const HeaderWebsite = () => {
                 </div>
                 <ul className="nav col-md-6 mb-2 justify-content-center mb-md-0 nav-header">
                     <li className="dropdown">
-                        <Link href="#" className="px-2 text-dark">
+                        <Link to={"/products"} className="px-2 text-dark">
                             SẢN PHẨM
                         </Link>
                     </li>

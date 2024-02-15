@@ -19,6 +19,8 @@ import ProductPageWebsite from "./pages/ProductPage";
 import ProductDetail from "./pages/ProductDetail";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
+import Content from "./components/website/Content";
+import ProductEx from "./pages/ProductEx";
 
 function App() {
     const [products, setProducts] = useState([]);
@@ -69,11 +71,12 @@ function App() {
         <>
             <Routes>
                 <Route path="/" element={<LayoutWebsite />}>
-                    <Route index />
+                    <Route index element={<Content />} />
                     <Route path="about" element={<h1>About Page</h1>} />
                     <Route
                         path="products"
-                        element={<ProductPageWebsite products={products} />}
+                        // element={<ProductPageWebsite products={products} />}
+                        element={<ProductEx products={products} />}
                     />
                     <Route path="products/:id" element={<ProductDetail />} />
                     <Route path="sign-up" element={<SignUp />} />

@@ -163,6 +163,203 @@ body {
     height: 100%;
 }
 
+.g-first-aside a {
+    border: none;
+    background-color: #fff;
+    font-family: "GeometricExtraBold";
+    font-size: 23px;
+    color: #999;
+    text-decoration: none;
+}
+
+.g-first-aside a:hover {
+    color: #000;
+    transition: linear 0.3s;
+}
+
+.prd1-left .left-type .type-divider {
+    border-right: #e1e1e1 1px solid;
+    height: 20px;
+    margin-top: 16px;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.left-divider {
+    height: 2px;
+    border-top: #303030 2px solid;
+    margin: 2px 0px;
+}
+
+.nav-tabs {
+    border: none;
+}
+
+.nav-list li a {
+    font-family: "Nunito Sans", sans-serif;
+    color: #000;
+}
+
+.nav-list li a:hover {
+    color: #000;
+}
+
+.nav-list li:hover a {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.accordion {
+    margin-bottom: 16px;
+    margin-top: -10px;
+}
+
+.accordion-header button {
+    color: #000;
+    font-family: GeometricExtraBold;
+    font-size: 23px;
+    margin-top: 30px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #fff;
+    box-shadow: none;
+    color: #f15e2c;
+}
+
+.nav-divider {
+    background: url("https://ananas.vn/wp-content/themes/ananas/fe-assets/images/bg_divider.png")
+        repeat-x 7px;
+    height: 2px;
+    margin: 4px 0px;
+}
+
+.big-item {
+    display: inline-block;
+    padding: 0px;
+    margin-bottom: 0px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: none;
+    /* border: #000 1px solid; */
+    border-radius: 0px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-item {
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+}
+
+.img-item .inormal,
+.img-item .ihover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.inormal {
+    display: block;
+    transition: 0.3s ease;
+}
+
+.ihover {
+    display: none;
+    transition: 0.3s ease;
+}
+
+.big-item:hover .inormal {
+    display: none;
+    transition: 0.3s ease;
+}
+
+.big-item:hover .ihover {
+    display: block;
+    transition: 0.3s ease;
+}
+
+.button {
+    text-align: center;
+    position: relative;
+    height: 60px;
+    top: -60px;
+    z-index: 85;
+}
+
+.button .btn-prd1-buynow {
+    border-radius: 0px;
+    background-color: #f15e2c;
+    border: #f15e2c 1px solid;
+    color: #fff;
+    font-family: GeometricExtraBold;
+    font-size: 23px;
+    width: 180px;
+    height: 60px;
+    padding-top: 16px;
+    opacity: 0;
+}
+
+.big-item:hover .button .btn-prd1-buynow {
+    transition: ease-in 0.5s;
+    opacity: 1;
+}
+
+.type {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    color: #ff5f17;
+    margin-bottom: 5px;
+}
+
+.divider {
+    background: url("https://ananas.vn/wp-content/themes/ananas/fe-assets/images/bg_divider.png")
+        repeat-x 7px;
+    height: 20px;
+    margin: 4px 0px;
+}
+
+.name,
+.color,
+.price {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+
+.name,
+.price {
+    font-weight: 700;
+}
+
+.name a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.name a:hover {
+    color: #ff5f17;
+    cursor: pointer;
+}
+
+.caption {
+    padding: 0px;
+    margin-top: -40px;
+}
+
 footer {
     background-color: #555555;
     color: var(--white--color);

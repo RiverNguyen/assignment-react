@@ -1,9 +1,11 @@
 import React from "react";
 import ProductList from "./ProductList";
+import BannerImg from "./BannerImg";
 
 const Content = () => {
     return (
         <>
+            <BannerImg />
             <div className="container mt-5">
                 <div className="row">
                     <div className="col-lg-6">

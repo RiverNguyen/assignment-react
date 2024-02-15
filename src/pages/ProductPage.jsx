@@ -11,7 +11,7 @@ const ProductPageWebsite = ({ products }) => {
                             <>
                                 <div className="col-md-4 border" key={index}>
                                     <img
-                                        src={product.image}
+                                        src={product.image[0]}
                                         height={400}
                                         alt={product.name}
                                     />

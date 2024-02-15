@@ -11,7 +11,6 @@ const LayoutWebsite = () => {
         <div>
             <div className="">
                 <HeaderWebsite />
-                <Content />
                 <main>
                     <Outlet />
                 </main>

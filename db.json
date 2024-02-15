@@ -1,34 +1,44 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Product A",
-      "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
-      "price": 200,
-      "description": "khong dep 1"
-    },
-    {
-      "id": "2",
-      "name": "Product B ",
-      "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
-      "price": 300,
-      "description": "444"
-    },
-    {
-      "id": "d680",
-      "name": "Product C",
-      "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
-      "price": "500",
-      "description": "Đẹp"
-    },
-    {
-      "name": "123",
+      "name": "Vintas Public 2000s - Low Top",
       "image": [
-        "https://res.cloudinary.com/dfykg7wtt/image/upload/v1707928638/assignment-ecma/qvizoktnrhx41jfvdhk9.jpg"
+        "https://res.cloudinary.com/dfykg7wtt/image/upload/v1708018450/assignment-ecma/mrg6o8axiwkk47pkat9s.jpg",
+        "https://res.cloudinary.com/dfykg7wtt/image/upload/v1708018452/assignment-ecma/glzxldaorvpupgppsuam.jpg"
       ],
-      "price": "123",
-      "description": "4",
-      "id": "2AB5574"
+      "price": "620000",
+      "description": "Insignia Blue",
+      "id": 1
+    },
+    {
+      "name": "Vintas Public 2000s - Low Top",
+      "image": [
+        "https://res.cloudinary.com/dfykg7wtt/image/upload/v1708020792/assignment-ecma/x8wsjvxd6u8kujnu6fu9.jpg",
+        "https://res.cloudinary.com/dfykg7wtt/image/upload/v1708020793/assignment-ecma/dbog2kab1pvko4sm65di.jpg"
+      ],
+      "price": "620000",
+      "description": "Brindle",
+      "id": 2
+    },
+    {
+      "name": "Vintas Public 2000s - Low Top",
+      "image": [
+        "https://res.cloudinary.com/dfykg7wtt/image/upload/v1708020931/assignment-ecma/xhzdysrdlqtpnd63kqrs.jpg",
+        "https://res.cloudinary.com/dfykg7wtt/image/upload/v1708020932/assignment-ecma/zct3dzsfd6ld8xczvpot.jpg"
+      ],
+      "price": "620000",
+      "description": "Caviar Black",
+      "id": 3
+    },
+    {
+      "name": "Hip Pack - Ananas Global Goal",
+      "image": [
+        "https://res.cloudinary.com/dfykg7wtt/image/upload/v1708022242/assignment-ecma/ezuphanwgvipfvyfxctx.jpg",
+        "https://res.cloudinary.com/dfykg7wtt/image/upload/v1708022244/assignment-ecma/r9de1zinik5gitcyptjw.jpg"
+      ],
+      "price": "275000",
+      "description": "Blue Berry",
+      "id": 4
     }
   ],
   "menus": [

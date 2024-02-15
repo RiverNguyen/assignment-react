@@ -8,7 +8,7 @@ const HeaderMenu = () => {
                 <nav>
                     <ul className="menu">
                         <li>
-                            <Link to="">
+                            <Link>
                                 <img
                                     src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/icon_heart_header.svg"
                                     alt="icon-love"
