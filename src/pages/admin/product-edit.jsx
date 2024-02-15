@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import { getProductById } from "../../api/product";
+import axios from "axios";
 
 const ProductEditPage = ({ onUpdate }) => {
     const { id } = useParams();
@@ -15,9 +16,36 @@ const ProductEditPage = ({ onUpdate }) => {
         })();
     }, [id]);
 
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
+        const uploadedUrls = await uploadFile(Array.from(data.image));
+        data.image = uploadedUrls;
         onUpdate(data);
         navigate("/admin/products");
+    };
+
+    const uploadFile = async (files) => {
+        if (files) {
+            const CLOUD_NAME = "dfykg7wtt";
+            const PRESET_NAME = "assignment-ecma";
+            const FOLDER_NAME = "assignment-ecma";
+            const urls = [];
+            const api = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`;
+
+            const formData = new FormData();
+            formData.append("upload_preset", PRESET_NAME);
+            formData.append("folder", FOLDER_NAME);
+
+            for (const file of files) {
+                formData.append("file", file);
+                const response = await axios.post(api, formData, {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                });
+                urls.push(response.data.secure_url);
+            }
+            return urls;
+        }
     };
 
     return (
@@ -42,8 +70,9 @@ const ProductEditPage = ({ onUpdate }) => {
                         Ảnh:
                     </label>
                     <input
-                        type="text"
+                        type="file"
                         id="productImage"
+                        multiple
                         className="form-control"
                         {...register("image")}
                     />

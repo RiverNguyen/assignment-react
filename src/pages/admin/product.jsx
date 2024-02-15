@@ -26,6 +26,7 @@ const ProductPage = ({ products, onRemove }) => {
                             <th scope="col">Ảnh</th>
                             <th scope="col">Tên sản phẩm</th>
                             <th scope="col">Giá</th>
+                            <th scope="col">Mô tả</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -35,7 +36,7 @@ const ProductPage = ({ products, onRemove }) => {
                                 <td>{index + 1}</td>
                                 <td>
                                     <img
-                                        src={product.image}
+                                        src={product.image[0]}
                                         alt={product.name}
                                         width={120}
                                     />
@@ -45,6 +46,9 @@ const ProductPage = ({ products, onRemove }) => {
                                 </td>
                                 <td>
                                     <span>{product.price}</span>
+                                </td>
+                                <td>
+                                    <span>{product.description}</span>
                                 </td>
                                 <td>
                                     <div className="d-flex">

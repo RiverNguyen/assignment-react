@@ -1,39 +1,60 @@
 {
-    "products": [
-        {
-            "id": "1",
-            "name": "Product A",
-            "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
-            "price": 200,
-            "description": ""
-        },
-        {
-            "id": "2",
-            "name": "Product B ",
-            "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
-            "price": 300,
-            "description": "444"
-        },
-        {
-            "id": "d680",
-            "name": "Product C",
-            "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
-            "price": "500",
-            "description": "Đẹp"
-        }
-    ],
-    "menus": [
-        {
-            "id": 1,
-            "label": "Thống kê",
-            "path": "/admin",
-            "icon": "<svg className=\"bi\"><use xlinkHref=\"#house-fill\" /></svg>"
-        },
-        {
-            "id": 2,
-            "label": "Sản phẩm",
-            "path": "/admin/products",
-            "icon": "<svg className=\"bi\"><use xlinkHref=\"#house-fill\" /></svg>"
-        }
-    ]
+  "products": [
+    {
+      "id": "1",
+      "name": "Product A",
+      "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
+      "price": 200,
+      "description": "khong dep 1"
+    },
+    {
+      "id": "2",
+      "name": "Product B ",
+      "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
+      "price": 300,
+      "description": "444"
+    },
+    {
+      "id": "d680",
+      "name": "Product C",
+      "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/s/a/samsung-galaxy-s23-ultra-12gb-512gb.png",
+      "price": "500",
+      "description": "Đẹp"
+    },
+    {
+      "name": "123",
+      "image": [
+        "https://res.cloudinary.com/dfykg7wtt/image/upload/v1707928638/assignment-ecma/qvizoktnrhx41jfvdhk9.jpg"
+      ],
+      "price": "123",
+      "description": "4",
+      "id": "2AB5574"
+    }
+  ],
+  "menus": [
+    {
+      "id": "1",
+      "label": "Thống kê",
+      "path": "/admin",
+      "icon": "<svg className=\"bi\"><use xlinkHref=\"#house-fill\" /></svg>"
+    },
+    {
+      "id": "2",
+      "label": "Sản phẩm",
+      "path": "/admin/products",
+      "icon": "<svg className=\"bi\"><use xlinkHref=\"#house-fill\" /></svg>"
+    }
+  ],
+  "users": [
+    {
+      "email": "ngiang1309@gmail.com",
+      "password": "$2a$10$.P5/s0oXdfRMa2zgbM7YA.2d3UEFhatVgf1jF4rpZKEpMcG4NdlYK",
+      "id": 1
+    },
+    {
+      "email": "ngiang139@gmail.com",
+      "password": "$2a$10$2mP0u64VyGO.Xew/0s51oungwgd0Ur35NnEVTh27faIOSZ6bQTl2K",
+      "id": 2
+    }
+  ]
 }

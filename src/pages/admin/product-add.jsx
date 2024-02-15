@@ -1,13 +1,43 @@
+import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ProductAddPage = ({ onAdd }) => {
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
-    const onSubmit = (data) => {
+    // const productImage = document.getElementById("productImage");
+
+    const onSubmit = async (data) => {
+        const uploadedUrls = await uploadFile(Array.from(data.image));
+        data.image = uploadedUrls;
         onAdd(data);
         navigate("/admin/products");
+    };
+
+    const uploadFile = async (files) => {
+        if (files) {
+            const CLOUD_NAME = "dfykg7wtt";
+            const PRESET_NAME = "assignment-ecma";
+            const FOLDER_NAME = "assignment-ecma";
+            const urls = [];
+            const api = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`;
+
+            const formData = new FormData();
+            formData.append("upload_preset", PRESET_NAME);
+            formData.append("folder", FOLDER_NAME);
+
+            for (const file of files) {
+                formData.append("file", file);
+                const response = await axios.post(api, formData, {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                });
+                urls.push(response.data.secure_url);
+            }
+            return urls;
+        }
     };
 
     return (
@@ -32,12 +62,14 @@ const ProductAddPage = ({ onAdd }) => {
                         Ảnh:
                     </label>
                     <input
-                        type="text"
+                        type="file"
                         id="productImage"
                         className="form-control"
+                        multiple
                         {...register("image")}
                     />
                 </div>
+
                 <div className="mb-3">
                     <label htmlFor="productPrice" className="form-label">
                         Giá:
