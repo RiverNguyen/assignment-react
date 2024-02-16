@@ -10,12 +10,9 @@ const ProductEx = ({ products }) => {
                     <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 prd1-left hidden-xs hidden-sm">
                         <div className="row left-type g-first-aside">
                             <ul className="nav nav-tabs ms-3" role="tablist">
-                                <li
-                                    role="presentation"
-                                    data-id="men,women"
-                                    className
-                                >
+                                <li role="presentation" data-id="men,women">
                                     <a
+                                        style={{ color: "black" }}
                                         href="#all"
                                         aria-controls="home"
                                         role="tab"
@@ -28,7 +25,7 @@ const ProductEx = ({ products }) => {
                                     role="presentation"
                                     className="type-divider"
                                 />
-                                <li role="presentation" data-id="men" className>
+                                <li role="presentation" data-id="men">
                                     <a
                                         href="#men"
                                         aria-controls="profile"
@@ -42,11 +39,7 @@ const ProductEx = ({ products }) => {
                                     role="presentation"
                                     className="type-divider"
                                 />
-                                <li
-                                    data-id="women"
-                                    role="presentation"
-                                    className
-                                >
+                                <li data-id="women" role="presentation">
                                     <a
                                         href="#women"
                                         aria-controls="profile"
@@ -590,10 +583,7 @@ const ProductEx = ({ products }) => {
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 prd1-right">
                         <div className="row prd1-right-box hidden-xs hidden-sm">
-                            <img
-                                src="https://ananas.vn/wp-content/uploads/desktop_productlist.jpg"
-                                alt
-                            />
+                            <img src="https://ananas.vn/wp-content/uploads/desktop_productlist.jpg" />
                         </div>
                         <div className="row prd1-right-items">
                             {products.map((product, index) => {
@@ -603,11 +593,8 @@ const ProductEx = ({ products }) => {
                                 ).format(product.price);
 
                                 return (
-                                    <>
-                                        <div
-                                            className="col-xs-6 col-sm-6 col-md-4 col-lg-4 item my-4"
-                                            key={index}
-                                        >
+                                    <React.Fragment key={index}>
+                                        <div className="col-xs-6 col-sm-6 col-md-4 col-lg-4 item my-4">
                                             <div className="big-item">
                                                 <div className="img-item">
                                                     <Link
@@ -653,7 +640,7 @@ const ProductEx = ({ products }) => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </>
+                                    </React.Fragment>
                                 );
                             })}
 

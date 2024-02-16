@@ -17,7 +17,7 @@ const HeaderMenu = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="">
+                            <Link to="/sign-up">
                                 <img
                                     src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images//svg/icon_dang_nhap.svg"
                                     alt="icon-sign-in"
@@ -28,10 +28,19 @@ const HeaderMenu = () => {
                         <li>
                             <Link to="">
                                 <img
-                                    src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/icon_gio_hang.svg"
+                                    src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/icon_tra_cuu_don_hang.svg"
                                     alt="icon-love"
                                 />
                                 <span>Giỏ hàng</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/admin">
+                                <img
+                                    src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/icon_gio_hang.svg"
+                                    alt="icon-love"
+                                />
+                                <span>Admin</span>
                             </Link>
                         </li>
                     </ul>
